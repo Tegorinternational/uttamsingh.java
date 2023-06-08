@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Uttam Singh">
+  <!-- wow.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!-- typing js -->
+  <script src="https://cdn.jsdelivr.net/gh/Tegorinternational/typing.js@1.0.0/typing.min.js"></script>
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind config -->
+  <script src="/js/config.js"></script>
+  
+  <!-- animation css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Tegorinternational/animation.css@v1.0.0/animation.min.css">
+  <!-- custom style sheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <title>Uttam Singh | Java developer</title>
+</head>
+<body>
+  
+  <!-- aside -->
+  <aside id="mySidebar" class="fixed -left-[16rem] sidebar flex flex-col w-64 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l z-40">
+    <a href="#">
+      <!-- logo -->
+        <div class="inline-block mx-auto text-center">
+          <span class="my-auto text-center tracking-wider font-black text-4xl text-blue-600 uppercase flex flex-row">Utm <span class="text-5xl text-orange-500 font-extrabold items-baseline">•</span></span>
+        </div>
+    </a>
+  
+    <div class="flex flex-col justify-between flex-1 mt-6">
+      <nav class="flex-1 -mx-3 space-y-3 ">
+        <div class="relative mx-3">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+            <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+              <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+  
+          <input type="text" class="w-full py-1.5 pl-10 pr-4 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" placeholder="Search" />
+        </div>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Home</span>
+        </a>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Dashboard</span>
+        </a>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Projects</span>
+        </a>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Tasks</span>
+        </a>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Reporting</span>
+        </a>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Users</span>
+        </a>
+  
+        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+  
+          <span class="mx-2 text-sm font-medium">Setting</span>
+        </a>
+      </nav>
+  
+      <div class="mt-6">
+        <div class="p-3 bg-gray-100 rounded-lg">
+          <h2 class="text-sm font-medium text-gray-800">New feature availabel!</h2>
+  
+          <p class="mt-1 text-xs text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus harum officia eligendi velit.</p>
+  
+          <img class="object-cover w-full h-32 mt-2 rounded-lg" src="https://images.unsplash.com/photo-1658953229664-e8d5ebd039ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&h=1374&q=80" alt="">
+        </div>
+  
+        <div class="flex items-center justify-between mt-6">
+          <a href="#" class="flex items-center gap-x-2">
+            <img class="object-cover rounded-full h-7 w-7" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&h=634&q=80" alt="avatar" />
+            <span class="text-sm font-medium text-gray-700">John Doe</span>
+          </a>
+  
+          <a href="#" class="text-gray-500 transition-colors duration-200 rotate-180 rtl:rotate-0 hover:text-blue-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- header -->
+  <header class="w-full fixed shadow top-0 z-30 bg-white overflow-hidden">
+    <div class="container mx-auto py-3 px-6">
+      <div class="flex flex-wrap mx-auto">
+        <span class="text-2xl text-blue-600 uppercase flex flex-wrap items-baseline slideInFromLeft"> <span class="my-auto tracking-wider font-extrabold">Utm </span><span class="text-4xl text-orange-500 font-extrabold">•</span></span>
+        
+          <button onclick="toggleSidebar()" class="font-bold ml-auto vibrate openbtn">
+            <span class="material-icons text-3xl font-medium slideInFromRight">menu</span>
+          </button>
+          
+      </div>
+    </div>
+  </header>
+  
+  <!-- hero -->
+  <section class="pt-24 overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="slideInFromLeft">
+        <h1 class="text-2xl font-bold tracking-wide mb-4">Hello, I'am <span class="text-blue-600">Uttam Singh</span>. And I'am a passionate <br><span class="text-blue-600 capitalize" id="animation"></span></h1>
+      </div>
+      <div class="flex justify-left mb-10">
+          <button class="slideInFromLeft text-white bg-blue-600 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded text-sm">Download CV</button>
+          <button class="slideInFromLeft ml-4 inline-flex text-blue-600 bg-white border border-blue-600 py-2 px-5 focus:outline-none hover:bg-gray-200 rounded text-sm">Contact</button>
+        </div>
+        <div class="relative rounded border-0 px-3">
+          
+          <div class="mix-blend-multiply absolute h-32 w-32 bg-cyan-100/50 rounded-full filter blur-xl z-10 right-5 bottom-40 animate-blob"></div>
+          <div class="mix-blend-multiply absolute h-32 w-32 bg-blue-200/10 rounded-full filter blur-lg z-10 -left-10 bottom-32 animate-wiggle"></div>
+          <div class="mix-blend-multiply absolute h-40 w-40 bg-[blue] rounded-full filter blur-3xl z-10 -bottom-10 left-20 animate-wiggle"></div>
+          
+            <img class="relative z-10 object-cover object-center rounded aspect-square w-full h-full heroImage" src="/images/tr.png" alt="Uttam Singh">
+        </div>
+    </div>
+  </section>
+  
+  <!-- about -->
+  <section class="relative bg-gray-900 z-10 -mt-4 text-gray-50 py-10 overflow-hidden">
+    <div class="container flex flex-wrap px-6 mx-auto ">
+      <div class="mb-10 mx-auto pb-10 overflow-hidden">
+        <h2 class="text-2xl font-medium border-b-4 border-orange-500 text-white inline-block mb-5 pb-1">About me</h2>
+        <p>
+          <ul class="w-full mx-auto text-gray-200 overflow-hidden">
+  <li class="slideInFromLeft text-center text-white"><strong>Optimization-focused Java Developer</strong> | Innovative Solutions | Crisp Communication</li>
+  <li class="slideInFromLeft "><strong>🚀</strong> Java developer with a passion for optimization and performance, dedicated to unleashing the full potential of your projects.</li>
+  <li class="slideInFromLeft "><strong>🎯</strong> Turbocharge Performance: Expert in identifying and eliminating bottlenecks, utilizing cutting-edge techniques to maximize speed and efficiency.</li>
+  <li class="slideInFromLeft "><strong>💡</strong> Design Innovator: Offering creative recommendations to enhance codebase and deliver novel solutions that scale and adapt to future needs.</li>
+  <li class="wow slideInFromLeft "><strong>🌐</strong> Client Interface: Strong communication skills ensure seamless collaboration between your team and clients, bridging the gap effectively.</li>
+  <li class="wow slideInFromLeft "><strong>🧩</strong> Modular Marvels: Specializing in building highly maintainable, modularized single-page applications for effortless scalability.</li>
+  <li class="wow slideInFromLeft "><strong>💪</strong> Dynamic Development Stack: Proficient in Spring Boot, Hibernate, JDBC, MySQL, HTML, CSS, and Oracle 11g for robust software development.</li>
+  <li class="wow slideInFromLeft "><strong>📚</strong> Documentation Guru: Meticulously creating technical/design documentation for smooth development and future enhancements.</li>
+  <li class="wow slideInFromLeft "><strong>🔧</strong> Post-Release Support: Committed to providing ongoing support, bug fixing, and maintenance to ensure your application's success.</li>
+  <li class="wow slideInFromLeft "><strong>⚡</strong> Driven Software Professional: Self-motivated, results-oriented team player experienced in Core Java, Servlets, and JSP.</li>
+  <li class="wow slideInFromLeft "><strong>🌟</strong> Let's Ignite Brilliance: Partner with me to bring innovation, optimization, and a touch of magic to your projects. Together, we'll shape the future of technology!</li>
+</ul>
+
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- work with us -->
+  <section class="">
+    <div class="container mx-auto px-6 mb-32">
+      <div class="wow slideInFromTop h-14 w-14 mx-auto bg-blue-600 rounded-full relative z-20 -top-[5.3rem] border-[6px] border-gray-900 flex flex-wrap"><h3 class="text-white text-center mx-auto my-auto justify-center text-2xl">&darr;</h3></div>
+      <div class="bg-blue-600 mx-auto -mt-28 relative z-10 rounded-lg px-5 py-10 text-center">
+        
+        <h3 class="text-white text-lg font-medium">Want to work together and create<br>amazing products with me?</h3>
+        
+        <div class="mt-5 py-2 bg-blue-700 rounded-full px-2 mx-auto flex flex-row">
+          <input class="outline-none ml-2 bg-blue-700 text-white inline-block" type="email" name="email" id="" placeholder="Type your email here">
+          <button class="wow slideInFromLeft px-3 py-2 bg-white text-blue-600 rounded-full ml-auto">Get a Quote</button>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- my work -->
+  <section class="">
+    <div class="container mx-auto px-2 overflow-hidden">
+      <div class="w-full mx-auto text-center">
+          <div class="mx-auto pb-10">
+            <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl tracking-wide">explore my <br> recent <span class="text-blue-500"> projects</span></h1>
+          </div>
+ 
+          <div class="w-full mx-auto flex flex-wrap -m-4" id="cards">
+            <!-- data is fatched by Javascript from json that will append here automatically -->
+            
+          </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- my experience -->
+  <section class="">
+    <div class="container mx-auto px-6 py-32 overflow-hidden">
+      <div class="mx-auto w-full">
+        <div class="mx-auto pb-10">
+          <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl tracking-wide">my past<br> work <span class="text-blue-500">experience</span></h1>
+        </div>
+        <div class="overflow-y-hidden overflow-x-scroll flex flex-row">
+          <div class="flex-none pl-2 wow slideInFromLeft">
+            <div class="flex flex-row mb-3">
+              <span class="h-3 -mr-5 z-10 aspect-square bg-blue-600 rounded-full"></span>
+              <hr class="w-full block my-auto h-1 border-0 bg-gradient-to-r from-blue-600"/>
+            </div>
+            <div class="mr-6 pl-3">
+              <h3>Mahindra Technologies</h3>
+              <h4>Beckend developer</h4>
+              <span>08/2020-10/2021</span>
+            </div>
+          </div>
+          <div class="flex-none wow slideInFromLeft">
+            <div class="flex flex-row mb-3">
+              <span class="h-3 -mr-1 z-10 aspect-square bg-blue-600 rounded-full"></span>
+              <hr class="w-full block my-auto h-1 border-0 bg-gradient-to-r from-blue-600" />
+            </div>
+            <div class="mr-6 pl-3">
+              <h3>Mahindra Technologies</h3>
+              <h4>Beckend developer</h4>
+              <span>08/2020-10/2021</span>
+            </div>
+          </div>
+          <div class="flex-none wow slideInFromLeft">
+            <div class="flex flex-row mb-3">
+              <span class="h-3 -mr-1 z-10 aspect-square bg-blue-600 rounded-full"></span>
+              <hr class="w-full block my-auto h-1 border-0 bg-gradient-to-r from-blue-600" />
+            </div>
+            <div class="mr-6 pl-3">
+              <h3>Mahindra Technologies</h3>
+              <h4>Beckend developer</h4>
+              <span>08/2020-10/2021</span>
+            </div>
+          </div>
+          <div class="flex-none wow slideInFromLeft">
+            <div class="flex flex-row mb-3">
+              <span class="h-3 -mr-1 z-10 aspect-square bg-blue-600 rounded-full"></span>
+              <hr class="w-full block my-auto h-1 border-0 bg-gradient-to-r from-blue-600" />
+            </div>
+            <div class="mr-6 pl-3">
+              <h3>Mahindra Technologies</h3>
+              <h4>Beckend developer</h4>
+              <span>08/2020-10/2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- my skills -->
+  <section class="">
+    <div class="container mx-auto px-6 pb-32">
+      <div class="mx-auto pb-10">
+          <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl tracking-wide">my past<br> work <span class="text-blue-500">experience</span></h1>
+        </div>
+        
+      <!-- backend -->
+      <div class="w-full mx-auto flex flex-row">
+        <div class="w-1/5 flex flex-row">
+          <p class="sd my-auto mr-2 text-lg font-bold">Backend</p>
+          <div class="flex flex-col">
+            <span class="w-4 aspect-square mx-auto bg-gray-800 rounded-full flex-none -mb-2"></span>
+            <div class="w-2 h-full mx-auto bg-gray-800">
+            </div>
+            <span class="w-4 aspect-square mx-auto bg-gray-800 rounded-full flex-none -mt-2"></span>
+          </div>
+        </div>
+        <div class="w-4/5 h-32 py-4 flex flex-col gap-y-1 h-full my-auto">
+          
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Java</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[70%] wow slideInFromLeftBars">70%</div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Oracle</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[70%] wow slideInFromLeftBars">70%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Spring boot</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[55%] wow slideInFromLeftBars">55%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">hibernate</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[50%] wow slideInFromLeftBars">50%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">sql/mysql</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[45%] wow slideInFromLeftBars">45%</div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <!-- frontend -->
+      <div class="w-full mx-auto flex flex-row">
+        <div class="w-1/5 flex flex-row">
+          <p class="sd my-auto mr-2 text-lg font-bold">Frontend</p>
+          <div class="flex flex-col">
+            <span class="w-4 hidden aspect-square mx-auto bg-gray-800 rounded-full flex-none -mb-2"></span>
+            <div class="w-2 -mt-2 h-full mx-auto bg-gray-800">
+            </div>
+            <span class="w-4 aspect-square mx-auto bg-gray-800 rounded-full flex-none -mt-2"></span>
+          </div>
+        </div>
+        <div class="w-4/5 h-32 py-4 flex flex-col gap-y-1 h-full my-auto">
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">HTML-5</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[75%] wow slideInFromLeftBars">75%</div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Cascading style sheet</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[50%] wow slideInFromLeftBars">50%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Javascript</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[40%] wow slideInFromLeftBars">40%</div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+      
+      <!-- tools -->
+      <div class="w-full mx-auto flex flex-row">
+        <div class="w-1/5 flex flex-row">
+          <p class="sd my-auto mr-2 text-lg font-bold">Software/toos</p>
+          <div class="flex flex-col">
+            <span class="w-4 hidden aspect-square mx-auto bg-gray-800 rounded-full flex-none -mb-2"></span>
+            <div class="w-2 -mt-2 h-full mx-auto bg-gray-800">
+            </div>
+            <span class="w-4 aspect-square mx-auto bg-gray-800 rounded-full flex-none -mt-2"></span>
+          </div>
+        </div>
+        <div class="w-4/5 h-32 py-4 flex flex-col gap-y-1 h-full my-auto">
+          
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Eclipse</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[80%] wow slideInFromLeftBars">80%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">Vs code</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[60%] wow slideInFromLeftBars">60%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">git</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[70%] wow slideInFromLeftBars">70%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">GitHub</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[80%] wow slideInFromLeftBars">80%</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="w-full">
+              <span class="text-left text-gray-700 mr-2 my-auto uppercase">bitbucket</span>
+              <div class="w-full my-auto">
+                <div class="w-full bg-slate-100 mb-6 rounded-l overflow-hidden">
+                  <div class="bg-blue-600 rounded text-xs font-medium py-[1px] text-blue-100 text-center w-[50%] wow slideInFromLeftBars">50%</div>
+                </div>
+              </div>
+            </div>
+          
+            
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- contact form -->
+  <section class="bg-gray-100">
+    <div class="container mx-auto px-6 py-20 overflow-hidden">
+      <div class="mx-auto pb-10">
+          <h1 class="text-2xl font-semibold text-left capitalize lg:text-3xl tracking-wide text-gray-900">contact us</h1>
+          <p class="">We’d love to hear from you</p>
+      </div>
+      <div class="w-full mx-auto flex flex-wrap">
+        <div class="hidden lg:block md:block w-1/2  w-full grayscale md:pr-2 md:w-1/2 my-auto">
+          <img loading="lazy" class="w-full h-full object-center object-cover rounded-lg" src="/images/profile.jpg" alt="">
+        </div>
+        <div class="w-full md:w-1/2 md:pl-2 mx-auto my-auto">
+         
+         <form class="" action="https:example.com" method="POST" accept-charset="utf-8">
+           <input class="wow slideInFromRight w-full px-4 py-3 rounded-full bg-white text-gray-900 outline-none focus:outline-blue-600 border mb-5" id="name" type="text" placeholder="Name">
+           
+           <input class="wow slideInFromRight w-full px-4 py-3 rounded-full bg-white text-gray-900 outline-none focus:outline-blue-600 border mb-5" id="email" type="email" placeholder="Email">
+           
+           <textarea class="wow slideInFromRight w-full border bg-white rounded-xl text-gray-900 p-4 h-32 block mb-5 outline-none focus:outline-blue-600" placeholder="Message" name="" id=""></textarea>
+           
+           <button type="submit" class="wow scaleIn w-full text-lg text-center py-2 bg-blue-600 text-white rounded-full">Submit</button>
+         </form>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- footer -->
+  <footer class="bg-gray-700 ">
+    <div class="container mx-auto px-6 py-10 overflow-hidden">
+      <div class="w-full mx-auto wow slideInFromLeft">
+        <h3 class="text-center text-2xl font-medium leading-6 mb-7 text-white">Subscribe our newsletter to get updates</h3>
+        
+        <div class="mt-5 py-2 bg-gray-900 rounded-full px-2 mx-auto flex flex-row text-sm">
+          <input class="outline-none ml-2 bg-gray-900 text-white inline-block" type="email" name="email" id="" placeholder="Type your email here">
+          <button class="wow slideInFromLeft px-3 py-2 bg-white text-blue-600 rounded-full ml-auto">Subscribe now</button>
+        </div>
+      </div>
+    </div>
+    <hr class="w-full border-gray-900">
+    <div class="container mx-auto px-6 py-10 text-center">
+        <!-- logo -->
+        <div class="inline-block mx-auto text-center">
+          <span class="my-auto text-center tracking-wider font-black text-4xl text-blue-600 uppercase flex flex-row">Utm <span class="text-5xl text-orange-500 font-extrabold items-baseline">•</span></span>
+        </div>
+        
+        <div class="pt-1">
+          <p class=" text-gray-400 text-sm ">© Copyright 2023 - Uttam Singh | All rights reserved.</p>
+        </div>
+      
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script>
+    // Vibration API
+    if ('vibrate' in navigator) {
+      // Get all the buttons with the specified class
+      var buttons = document.querySelectorAll('.vibrate');
+      // Add a click event listener to each button
+      buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          // Vibrate for 200 milliseconds
+          navigator.vibrate(30);
+        });
+      });
+    } else {
+      console.log('Vibration API is not supported.');
+    }
+    
+    //side bar
+    function toggleSidebar() {
+      var sidebar = document.getElementById("mySidebar");
+      var openbtn = document.getElementsByClassName("openbtn")[0];
+      var icon = openbtn.getElementsByTagName("span")[0];
+      sidebar.classList.toggle("open");
+      icon.innerHTML = sidebar.classList.contains("open") ? "close" : "menu";
+    }
+    
+    // typing js customisation
+    var typing = new TypingJs('animation', {
+      strings: ['java developer', 'backend developer'],
+      typeSpeed: 120,
+      backSpeed: 30,
+      startDelay: 0,
+      loop: true,
+      cursorChar: '|',
+      cursorColor: 'black',
+    
+    });
+    
+    // wow.js
+    new WOW().init();
+  </script>
+  
+</body>
+</html>
